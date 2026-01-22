@@ -11,4 +11,9 @@ export class AppController {
   me(@Req() req) {
     return req.user;
   }
+
+  @Get('health')
+  health() {
+    return this.appService.health();
+  }
 }
