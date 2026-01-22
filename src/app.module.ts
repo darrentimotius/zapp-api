@@ -5,6 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { RoomsModule } from './rooms/rooms.module';
+import { ItemsModule } from './items/items.module';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { RoomsModule } from './rooms/rooms.module';
       })
     }),
     AuthModule,
-    RoomsModule
+    RoomsModule,
+    ItemsModule
   ],
   controllers: [AppController],
   providers: [AppService],
