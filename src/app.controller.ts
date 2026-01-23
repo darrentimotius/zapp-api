@@ -6,6 +6,14 @@ import { SupabaseAuthGuard } from './auth/supabase-auth.guard';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get()
+  root() {
+    return {
+      name: 'ZAPP! API',
+      status: 'ok'
+    }
+  }
+
   @UseGuards(SupabaseAuthGuard)
   @Get('me')
   me(@Req() req) {
