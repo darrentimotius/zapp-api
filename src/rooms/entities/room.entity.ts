@@ -11,4 +11,7 @@ export class Room {
 
     @Column()
     name: string
+
+    @Column({ type: 'timestamptz', default: () => 'now()' })
+    created_at: Date;
 }

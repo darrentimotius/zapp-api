@@ -45,4 +45,7 @@ export class Item {
 
     @Column({ type: 'int' })
     usage_watt: number
+
+    @Column({ type: 'timestamptz', default: () => 'now()' })
+    created_at: Date;
 }
